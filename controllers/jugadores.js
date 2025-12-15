@@ -10,7 +10,7 @@ const registrarJugador = async (req, res) => {
     const { teamID } = req.params
     const jugador = req.body
     await addPlayer({ jugador, teamID })
-    res.json({ message: "Jugador agregado con éxito" })
+    res.status(201).send({ message: "Jugador agregado con éxito" })
 }
 
 
